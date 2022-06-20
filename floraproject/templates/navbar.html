@@ -1,0 +1,84 @@
+{% load static %}
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" >Floral Mercantile</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      {% if user.is_authenticated %}
+      <li class="nav-item"><a class="nav-link" >Hello <b>{{user.username}}</b></a></li>
+      <li class="nav-item"><a class="nav-link" href="credentials/logout">Logout</a></li>
+      {% else %}
+      <li class="nav-item">
+        <a class="nav-link" href="credentials/login">Login</a>
+      </li>
+        <li class="nav-item">
+        <a class="nav-link" href="credentials/register">Register</a>
+      </li>
+      {% endif %}
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"  aria-haspopup="true" aria-expanded="false">
+          Branches
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Trivandrum</a>
+          <a class="dropdown-item" href="#">Alappuzha</a>
+          <a class="dropdown-item" href="#">Ernakulam</a>
+          <a class="dropdown-item" href="#">Trissur</a>
+          <a class="dropdown-item" href="#">Malappuram</a>
+          <a class="dropdown-item" href="#">Kozhikkode</a>
+        </div>
+      </li>
+
+    </ul>
+
+  </div>
+</nav>
+<div class="jumbotron text-center">
+  <h1>Floral Mercantile</h1>
+  <p>Flower delivery in a flash!</p>
+  <form>
+
+
+      <div >
+
+        <a class="btn btn-secondary" href="credentials/form" role="button">Order Your Flower</a>
+      </div>
+
+  </form>
+</div>
+
+<!-- Container (Contact Section) -->
+<div id="#" class="container-fluid bg-grey">
+  <h2 class="text-center">CONTACT</h2>
+  <div class="row">
+    <div class="col-sm-6">
+      <p>Contact us and we'll get back to you within 24 hours.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> Trivandrum, Kerala</p>
+      <p><span class="glyphicon glyphicon-phone"></span> 888 999 7777</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> enquiry@floramerch.com</p>
+    </div>
+<!--    <div class="col-sm-7 slideanim">-->
+<!--      <div class="row">-->
+<!--        <div class="col-sm-6 form-group">-->
+<!--          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>-->
+<!--        </div>-->
+<!--        <div class="col-sm-6 form-group">-->
+<!--          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>-->
+<!--      <div class="row">-->
+<!--        <div class="col-sm-12 form-group">-->
+<!--          <button class="btn btn-default pull-right" type="submit">Send</button>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div></div>-->
+  </div>
+</div>
